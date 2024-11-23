@@ -29,10 +29,9 @@ function pintarVitoria(cells) {
   jogoFinalizado = true; // Marca o jogo como finalizado
 }
 
-
-
 div.forEach(function (item) {
-  item.addEventListener('click', function (ev) {
+  item.addEventListener('click', function () {
+
     if(player1.value === '' || player2.value === '') {
       alert('digite o nome dos jogadores')
       return
@@ -123,20 +122,21 @@ div.forEach(function (item) {
             pintarVitoria([div[2], div[4], div[6]]);
           }
         }
+        reiniciar.addEventListener('click', function() {
+          h2.innerHTML= 'Vez de: <span id="turnPlayer"></span>'
+          player1.value = ''
+          player2.value = ''
+          item.innerText = ''
+          item.style.backgroundColor = 'white'
+          item.style.color = 'black'
+          for(let i = 0;i < x.length;i++) {
+            x.pop()
+          }
+          for(let i = 0;i < o.length;i++) {
+            o.pop()
+          }
+          console.log(x,o)
+          jogoFinalizado = false;
+        })
     })
   }); 
-  reiniciar.addEventListener('click', function() {
-    jogadorDaVez.innerText = ''
-    player1.value = ''
-    player2.value = ''
-    item.innerText = ''
-    for(let i = 0;i < x.length;i++) {
-      x.pop()
-    }
-    for(let i = 0;i < o.length;i++) {
-      o.pop()
-    }
-    console.log(x,o)
-    jogoFinalizado = false;
-  })
-  

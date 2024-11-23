@@ -1,4 +1,6 @@
-
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 /* Estilos para o tabuleiro */
 .board {
   display: flex;
@@ -10,6 +12,10 @@
 /* Estilos para cada linha */
 .row {
   display: flex;
+}
+
+.sumir {
+  display: inline;
 }
 
 /* Estilos para cada célula do tabuleiro */
@@ -32,7 +38,6 @@
 }
 
 .vencedor {
-  background-color: green;
   width: 100px;
   height: 100px;
   border: 1px solid black;
@@ -40,6 +45,7 @@
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+  background-color: green;
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
 }
