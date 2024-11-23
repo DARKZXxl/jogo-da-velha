@@ -33,6 +33,10 @@ function pintarVitoria(cells) {
 
 div.forEach(function (item) {
   item.addEventListener('click', function (ev) {
+    if(player1.value === '' || player2.value === '') {
+      alert('digite o nome dos jogadores')
+      return
+    }
     if (jogoFinalizado) {
       return; // Se o jogo acabou, não permite mais cliques
     }
