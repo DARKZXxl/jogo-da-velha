@@ -1,0 +1,45 @@
+
+/* Estilos para o tabuleiro */
+.board {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+/* Estilos para cada linha */
+.row {
+  display: flex;
+}
+
+/* Estilos para cada célula do tabuleiro */
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Efeito de hover nas células */
+.cell:hover {
+  background-color: #f0f0f0;
+}
+
+.vencedor {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
