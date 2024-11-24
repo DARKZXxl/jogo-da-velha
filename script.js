@@ -27,13 +27,13 @@ start.addEventListener('click', function () {
 
 function pintarVitoria(cells) {
   cells.forEach(cell => {
-    cell.style.backgroundColor = 'green'; // Altere a cor do fundo para verde
+    cell.style.backgroundColor = 'green'; 
   });
 
   cells.forEach(cell => {
-    cell.style.pointerEvents = 'none'; // Impede qualquer interação com as células vencedoras
+    cell.style.pointerEvents = 'none'; 
   });
-  jogoFinalizado = true; // Marca o jogo como finalizado
+  jogoFinalizado = true;
 }
 
 div.forEach(function (item) {
@@ -44,7 +44,7 @@ div.forEach(function (item) {
       return
     }
     if (jogoFinalizado) {
-      return; // Se o jogo acabou, não permite mais cliques
+      return
     }
     if(o.includes(item.dataset.positon) || x.includes(item.dataset.positon)) {
       
