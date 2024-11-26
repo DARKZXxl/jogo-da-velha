@@ -159,8 +159,6 @@ div.forEach(function (item) {
           vencedor.style.display = 'none'
           h2.style.display = 'block'
           jogadorDaVez.innerText = ''
-          player1.value = ''
-          player2.value = ''
           item.innerText = ''
           item.style.backgroundColor = 'white'
           item.style.color = 'black'
