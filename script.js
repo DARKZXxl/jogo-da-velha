@@ -37,7 +37,7 @@ function pintarVitoria(cells) {
 }
 
 div.forEach(function (item) {
-  item.addEventListener('click', function () {
+  item.addEventListener('click', function oi() {
     
     if(player1.value === '' || player2.value === '') {
       alert('digite o nome dos jogadores')
@@ -156,6 +156,7 @@ div.forEach(function (item) {
           }
         }
         reiniciar.addEventListener('click', function() {
+         item.removeEventListener('click', oi)
           vencedor.style.display = 'none'
           h2.style.display = 'block'
           jogadorDaVez.innerText = ''
