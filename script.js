@@ -48,7 +48,7 @@ div.forEach(function (item) {
     }
     if(o.includes(item.dataset.positon) || x.includes(item.dataset.positon)) {
       
-    }  
+    }  else {
         if (jogadorDaVez.innerText === player1.value) {
           item.innerText = 'X' 
           jogadorDaVez.innerText = player2.value;
