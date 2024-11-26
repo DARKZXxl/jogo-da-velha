@@ -53,7 +53,7 @@ div.forEach(function (item) {
           item.innerText = 'X' 
           jogadorDaVez.innerText = player2.value;
           x.push(item.dataset.positon)
-        
+        }
          else {
               item.innerText = 'O' 
               jogadorDaVez.innerText = player1.value; 
