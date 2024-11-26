@@ -156,7 +156,7 @@ div.forEach(function (item) {
           }
         }
         reiniciar.addEventListener('click', function() {
-         item.removeEventListener('click', oi)
+      
           vencedor.style.display = 'none'
           h2.style.display = 'block'
           jogadorDaVez.innerText = ''
