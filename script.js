@@ -12,9 +12,23 @@ const o = []
 
 start.addEventListener('click', function () {
   jogoFinalizado = false
-  div.forEach(function (cell) {
-    cell.style.pointerEvents = 'auto'
+  div.forEach( function(item) {
+    item.innerText = ''
+    item.style.backgroundColor = 'white'
+    item.style.color = 'black'
+    item.style.pointerEvents = 'auto'
   })
+  vencedor.style.display = 'none'
+  h2.style.display = 'block'
+  for(let i = 0;i < x.length;i++) {
+    x.pop()
+  }
+  for(let i = 0;i < o.length;i++) {
+    o.pop()
+  }
+  o.shift()
+  x.shift()
+  console.log(o,x)
   vencedor.innerText = ''
   vencedor.style.display = 'block'
   if (player1.value === '' || player2.value === '') {
@@ -156,7 +170,8 @@ div.forEach(function (item) {
           }
         }
         reiniciar.addEventListener('click', function() {
-      
+          player1.value = ''
+          player2.value = ''
           vencedor.style.display = 'none'
           h2.style.display = 'block'
           jogadorDaVez.innerText = ''
