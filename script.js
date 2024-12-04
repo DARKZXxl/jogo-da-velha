@@ -22,7 +22,7 @@ start.addEventListener('click', function () {
   h2.style.display = 'block'
   for(let i = 0;i < x.length;i++) {
     x.pop()
-    X.shift()
+    x.shift()
   }
   for(let i = 0;i < o.length;i++) {
     o.pop()
