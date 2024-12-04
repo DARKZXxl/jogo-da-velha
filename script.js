@@ -22,12 +22,12 @@ start.addEventListener('click', function () {
   h2.style.display = 'block'
   for(let i = 0;i < x.length;i++) {
     x.pop()
+    X.shift()
   }
   for(let i = 0;i < o.length;i++) {
     o.pop()
+    o.shift()
   }
-  o.shift()
-  x.shift()
   console.log(o,x)
   vencedor.innerText = ''
   vencedor.style.display = 'block'
