@@ -7,8 +7,8 @@ const h2 = document.querySelector('#h2')
 const reiniciar = document.getElementById('reiniciar')
 let jogoFinalizado = false
 const vencedor = document.getElementById('vencedo')
-const x = []
-const o = []
+let x = []
+let o = []
 
 start.addEventListener('click', function () {
   jogoFinalizado = false
@@ -20,15 +20,10 @@ start.addEventListener('click', function () {
   })
   vencedor.style.display = 'none'
   h2.style.display = 'block'
-  for(let i = 0;i < x.length;i++) {
-    x.pop()
-    x.shift()
-  }
-  for(let i = 0;i < o.length;i++) {
-    o.pop()
-    o.shift()
-  }
-  console.log(o,x)
+  x.length = 0
+  o.length = 0
+  console.log(o)
+  console.log(x)
   vencedor.innerText = ''
   vencedor.style.display = 'block'
   if (player1.value === '' || player2.value === '') {
@@ -178,12 +173,8 @@ div.forEach(function (item) {
           item.innerText = ''
           item.style.backgroundColor = 'white'
           item.style.color = 'black'
-          for(let i = 0;i < x.length;i++) {
-            x.pop()
-          }
-          for(let i = 0;i < o.length;i++) {
-            o.pop()
-          }
+          x.length = 0
+          o.length = 0
           console.log(x,o)
           jogoFinalizado = false
         })
